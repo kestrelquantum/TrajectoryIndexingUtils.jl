@@ -49,5 +49,18 @@ Pkg.add(url="https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl", rev
 
 ### The `index` function
 
+```julia
+index(t::Int, dim::Int) -> zₜ[dim]
+index(t::Int, pos::Int, dim::Int) -> zₜ[pos]
+``` 
+
 ### The `slice` function
+
+```julia
+slice(t::Int, dim::Int; stretch=0) -> zₜ[1:dim + stretch] # can be used to extract, e.g., [xₜ; xₜ₊₁], with stretch = dim
+slice(t::Int, pos::Int, dim::Int) -> zₜ[1:pos]
+slice(t::Int, pos1::Int, pos2::Int, dim::Int) -> zₜ[pos1:pos2]
+slice(t::Int, indices::AbstractVector{Int}, dim::Int) -> zₜ[indices]
+slice(ts::UnitRange{Int}, dim::Int) -> vec(zₜ for t ∈ ts)
+```
 
