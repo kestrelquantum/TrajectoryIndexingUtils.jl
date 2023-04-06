@@ -64,3 +64,8 @@ slice(t::Int, indices::AbstractVector{Int}, dim::Int) -> zₜ[indices]
 slice(ts::UnitRange{Int}, dim::Int) -> vec(zₜ for t ∈ ts)
 ```
 
+## TODO
+
+- [ ] Add tests
+- [ ] Add methods that take in trajectory vector as first argument
+- [ ] Add documentation for methods to [NamedTrajectories.jl](https://github.com/aarontrowbridge/NamedTrajectories.jl) docs
