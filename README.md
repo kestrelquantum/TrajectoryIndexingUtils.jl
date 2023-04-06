@@ -69,3 +69,4 @@ slice(ts::UnitRange{Int}, dim::Int) -> vec(zₜ for t ∈ ts)
 - [ ] Add tests
 - [ ] Add methods that take in trajectory vector as the first argument
 - [ ] Add documentation for methods to [NamedTrajectories.jl](https://github.com/aarontrowbridge/NamedTrajectories.jl) docs
+- [ ] Add `block` function for accessing blocks of matrices with trajectory structure, e.g. jacobians & hessians
