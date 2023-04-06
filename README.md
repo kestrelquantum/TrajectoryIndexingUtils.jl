@@ -34,7 +34,8 @@ where each element $z_t$ is referred to as a *knot point* and normally contains 
     uₜʲ = Z⃗[index(t, j + n, dim)]
     ```
 
-With this, the user is still responsible for keeping track of the component indices for $x$ and $u$, and possibly other components. To alleviate this, the package [NamedTrajectories.jl](https://github.com/aarontrowbridge/NamedTrajectories.jl) builds on top of this package to provide a more convenient interface for working with trajectories with named components, please check it out!
+With this, the user is still responsible for keeping track of the component indices for $x$ and $u$, and possibly other components. To alleviate this, the package [NamedTrajectories.jl](https://github.com/aarontrowbridge/NamedTrajectories.jl) provides a richer alternative for handling trajectory data with arbitrarily named components, please check it out!
+
 
 ## Installation
 
