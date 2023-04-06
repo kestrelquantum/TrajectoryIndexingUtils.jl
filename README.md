@@ -1,6 +1,53 @@
-# TrajectoryIndexingUtils
+# TrajectoryIndexingUtils.jl
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://aarontrowbridge.github.io/TrajectoryIndexingUtils.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://aarontrowbridge.github.io/TrajectoryIndexingUtils.jl/dev/)
 [![Build Status](https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![Coverage](https://codecov.io/gh/aarontrowbridge/TrajectoryIndexingUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/aarontrowbridge/TrajectoryIndexingUtils.jl)
+
+This is a super lightweight package that exports two functions: `index` and `slice`.  These functions have helped to ease the burden of handling messy indexing into trajectory data vectors of the form 
+
+```math
+\vec Z = \text{vec}\left(z_1, z_2, \ldots, z_T\right) \in \mathbf{R}^{T \cdot d}
+```
+
+where each element $z_t$ is referred to as a *knot point* and normally contains *state* variables and *control* variables. In a simple situation we might have $z_t = \text{vec} (x_t, u_t) \in \mathbf{R}^{d = n+m}$, for the state $x_t \in \mathbf{R}^n$ and control $u_t \in \mathbf{R}^m$.  In this case, with  `dim = n + m`, we can use `slice` and `index`, to extract what we want from $\vec Z$ in the following way:
+
+* extract $z_t$:
+    ```julia
+    zₜ = Z⃗[slice(t, dim)]
+    ```
+* extract $x_t$:
+    ```julia
+    xₜ = Z⃗[slice(t, 1:n, dim)]
+    ```
+* extract $u_t$:
+    ```julia
+    uₜ = Z⃗[slice(t, (1:m) .+ n, dim)]
+    ```
+* extract $i$-th component of $x_t$:
+    ```julia
+    xₜⁱ = Z⃗[index(t, i, dim)]
+    ```
+* extract $j$-th component of $u_t$:
+    ```julia
+    uₜʲ = Z⃗[index(t, j + n, dim)]
+    ```
+
+With this, the user is still responsible for keeping track of the component indices for $x$ and $u$, and possibly other components. To alleviate that the package [NamedTrajectories.jl](https://github.com/aarontrowbridge/NamedTrajectories.jl) builds on top of this package to provide a more convenient interface for working with trajectories with named components, please check it out!
+
+## Installation
+
+This package is not yet registered.  To install, use the following command:
+
+```julia
+using Pkg
+Pkg.add(url="https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl", rev="main")
+```
+
+## Methods 
+
+### The `index` function
+
+### The `slice` function
+
