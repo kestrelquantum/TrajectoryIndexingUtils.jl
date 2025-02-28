@@ -1,9 +1,9 @@
 # TrajectoryIndexingUtils.jl
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://aarontrowbridge.github.io/TrajectoryIndexingUtils.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://aarontrowbridge.github.io/TrajectoryIndexingUtils.jl/dev/)
-[![Build Status](https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/aarontrowbridge/TrajectoryIndexingUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/aarontrowbridge/TrajectoryIndexingUtils.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://harmoniqs.github.io/TrajectoryIndexingUtils.jl/stable/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://harmoniqs.github.io/TrajectoryIndexingUtils.jl/dev/)
+[![Build Status](https://github.com/harmoniqs/TrajectoryIndexingUtils.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/harmoniqs/TrajectoryIndexingUtils.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/harmoniqs/TrajectoryIndexingUtils.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/harmoniqs/TrajectoryIndexingUtils.jl)
 
 This is a super lightweight package that exports two functions: `index` and `slice`.  These functions have helped to ease the burden of handling messy indexing into trajectory data vectors of the form 
 
@@ -34,7 +34,7 @@ where each element $z_t$ is referred to as a *knot point* and normally contains 
     uₜʲ = Z⃗[index(t, j + n, dim)]
     ```
 
-With this, the user is still responsible for keeping track of the component indices for $x$ and $u$, and possibly other variables. To alleviate this nuisance, the package [NamedTrajectories.jl](https://github.com/aarontrowbridge/NamedTrajectories.jl) provides a richer alternative for handling trajectory data with arbitrarily named components, please check it out!
+With this, the user is still responsible for keeping track of the component indices for $x$ and $u$, and possibly other variables. To alleviate this nuisance, the package [NamedTrajectories.jl](https://github.com/harmoniqs/NamedTrajectories.jl) provides a richer alternative for handling trajectory data with arbitrarily named components, please check it out!
 
 
 ## Installation
@@ -43,7 +43,7 @@ This package is not yet registered.  To install, use the following command:
 
 ```julia
 using Pkg
-Pkg.add(url="https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl", rev="main")
+Pkg.add(url="https://github.com/harmoniqs/TrajectoryIndexingUtils.jl", rev="main")
 ```
 
 ## Methods 
