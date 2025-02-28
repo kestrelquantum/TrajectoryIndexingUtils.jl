@@ -4,7 +4,7 @@ CurrentModule = TrajectoryIndexingUtils
 
 # TrajectoryIndexingUtils
 
-Documentation for [TrajectoryIndexingUtils](https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl).
+Documentation for [TrajectoryIndexingUtils](https://github.com/harmoniqs/TrajectoryIndexingUtils.jl).
 
 ```@index
 ```

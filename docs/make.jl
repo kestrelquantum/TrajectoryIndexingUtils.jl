@@ -6,11 +6,11 @@ DocMeta.setdocmeta!(TrajectoryIndexingUtils, :DocTestSetup, :(using TrajectoryIn
 makedocs(;
     modules=[TrajectoryIndexingUtils],
     authors="Aaron Trowbridge <aaron.j.trowbridge@gmail.com> and contributors",
-    repo="https://github.com/aarontrowbridge/TrajectoryIndexingUtils.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/harmoniqs/TrajectoryIndexingUtils.jl/blob/{commit}{path}#{line}",
     sitename="TrajectoryIndexingUtils.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://aarontrowbridge.github.io/TrajectoryIndexingUtils.jl",
+        canonical="https://docs.harmoniqs.co/TrajectoryIndexingUtils.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -20,6 +20,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/aarontrowbridge/TrajectoryIndexingUtils.jl",
+    repo="github.com/harmoniqs/TrajectoryIndexingUtils.jl",
     devbranch="main",
 )
